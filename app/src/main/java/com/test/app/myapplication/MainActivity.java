@@ -16,9 +16,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.TextView;
 
+
+//Just a dummy project to learn implementing Tabs with PageViewer and swiping functionality
 public class MainActivity extends AppCompatActivity {
 
     @Override
