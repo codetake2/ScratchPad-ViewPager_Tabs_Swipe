@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         final ViewPager view_pager = (ViewPager) findViewById(R.id.viewpager);
         view_pager.setAdapter(adapter);
 
+        //HS Comment: This is the only method we need to link the ViewPager with the TabLayout
         view_pager.addOnPageChangeListener
                 (new TabLayout.TabLayoutOnPageChangeListener(tab_layout));
 
@@ -61,7 +62,13 @@ public class MainActivity extends AppCompatActivity {
 
 //        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
 //        tabLayout.setupWithViewPager(view_pager);
-          tab_layout.setupWithViewPager(view_pager);
+
+        /** HS Comment: Commented out this particular line
+         * This particular method basically tells the code to pick up the tab
+         * details from the view pager adapter, where the getPageTitle method
+         * sets the tab title and overwrites the name
+         */
+        //tab_layout.setupWithViewPager(view_pager);
 
 
 

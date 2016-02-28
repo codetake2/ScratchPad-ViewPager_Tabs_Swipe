@@ -41,7 +41,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter{
     //ToDo: Why the hell does this method set the Titles for the Tabs?
     //ToDo: this is commented out then the Tab titles are blank
     //ToDo: so this doesnt seem to be overwriting the .setText() method from the MainActivity class
-    @Override
+    /*@Override
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
@@ -52,5 +52,5 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter{
                 return "SECTION 3";
         }
         return null;
-    }
+    }*/
 }
