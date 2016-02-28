@@ -5,22 +5,18 @@ import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
 
 //Just a dummy project to learn implementing Tabs with PageViewer and swiping functionality
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = "debugMsgs";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         tab_layout.addTab(tab_layout.newTab().setText("Products"));
         tab_layout.addTab(tab_layout.newTab().setText("Users"));
         tab_layout.setTabGravity(TabLayout.GRAVITY_FILL);
+
+        Log.i(TAG, "getTabCount : " + tab_layout.getTabCount());
 
         // Set up the ViewPager with the view pager adapter.
         final ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager(),tab_layout.getTabCount());
